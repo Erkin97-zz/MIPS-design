@@ -1,0 +1,95 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/intelFPGA/16.1
+vALU
+Z0 !s110 1541228942
+!i10b 1
+!s100 ljYm8lk`a`eHfG57bf7Oc3
+IgP>Gj14TDJK3LGNQ9C]Ac2
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dD:/my-projects/MIPS-design
+w1491135090
+8D:/my-projects/MIPS-design/ALU.v
+FD:/my-projects/MIPS-design/ALU.v
+L0 1
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1541228942.000000
+!s107 D:/my-projects/MIPS-design/ALU.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/my-projects/MIPS-design/ALU.v|
+!i113 1
+Z5 o-work work
+Z6 tCvgOpt 0
+n@a@l@u
+vdata_memory
+R0
+!i10b 1
+!s100 2G_d4eghmKAN0SP0Y;PF32
+II[^8hQmU0W7SJb=F3ZjHG2
+R1
+R2
+w1492333930
+8D:/my-projects/MIPS-design/data_memory.v
+FD:/my-projects/MIPS-design/data_memory.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 D:/my-projects/MIPS-design/data_memory.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/my-projects/MIPS-design/data_memory.v|
+!i113 1
+R5
+R6
+vinstruction_memory
+R0
+!i10b 1
+!s100 ?o:1S0dYCf`6aQEYKgMOT3
+IU2A;a?an5]9WW_1R`OoJa3
+R1
+R2
+w1492509766
+8D:/my-projects/MIPS-design/instruction_memory.v
+FD:/my-projects/MIPS-design/instruction_memory.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 D:/my-projects/MIPS-design/instruction_memory.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/my-projects/MIPS-design/instruction_memory.v|
+!i113 1
+R5
+R6
+vregister_file
+R0
+!i10b 1
+!s100 7:7QdSIIQU@6m@nmaF?R52
+IWe5<LYEg853mReiQ6NAm30
+R1
+R2
+w1491964392
+8D:/my-projects/MIPS-design/register_file.v
+FD:/my-projects/MIPS-design/register_file.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 D:/my-projects/MIPS-design/register_file.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/my-projects/MIPS-design/register_file.v|
+!i113 1
+R5
+R6
