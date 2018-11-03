@@ -9,7 +9,7 @@ z2
 cModel Technology
 dC:/intelFPGA/16.1
 vALU
-Z0 !s110 1541230219
+Z0 !s110 1541252881
 !i10b 1
 !s100 ljYm8lk`a`eHfG57bf7Oc3
 IgP>Gj14TDJK3LGNQ9C]Ac2
@@ -23,7 +23,7 @@ Z3 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z4 !s108 1541230219.000000
+Z4 !s108 1541252881.000000
 !s107 D:/my-projects/MIPS-design/ALU.v|
 !s90 -reportprogress|300|-work|work|-stats=none|D:/my-projects/MIPS-design/ALU.v|
 !i113 1
@@ -31,23 +31,23 @@ Z5 o-work work
 Z6 tCvgOpt 0
 n@a@l@u
 vALU_tb
-R0
+Z7 !s110 1541252882
 !i10b 1
 !s100 [Bd^HA=hLPOld3h:RjjJ92
-IKD=j[`BQD8;Xzzi649cz03
+ISJB45QYiAZIzcGcJocfeF2
 R1
 R2
 w1541230204
-8D:\my-projects\MIPS-design\ALU_tb.v
-FD:\my-projects\MIPS-design\ALU_tb.v
+8D:/my-projects/MIPS-design/ALU_tb.v
+FD:/my-projects/MIPS-design/ALU_tb.v
 L0 1
 R3
 r1
 !s85 0
 31
-R4
-!s107 D:\my-projects\MIPS-design\ALU_tb.v|
-!s90 -reportprogress|300|-work|work|-stats=none|D:\my-projects\MIPS-design\ALU_tb.v|
+Z8 !s108 1541252882.000000
+!s107 D:/my-projects/MIPS-design/ALU_tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/my-projects/MIPS-design/ALU_tb.v|
 !i113 1
 R5
 R6
@@ -56,25 +56,25 @@ vdata_memory
 R0
 !i10b 1
 !s100 2G_d4eghmKAN0SP0Y;PF32
-Idz3MaRFNbe_SX7fkHE>1U1
+II[^8hQmU0W7SJb=F3ZjHG2
 R1
 R2
-w1492333930
-8D:\my-projects\MIPS-design\data_memory.v
-FD:\my-projects\MIPS-design\data_memory.v
+w1541230802
+8D:/my-projects/MIPS-design/data_memory.v
+FD:/my-projects/MIPS-design/data_memory.v
 L0 1
 R3
 r1
 !s85 0
 31
 R4
-!s107 D:\my-projects\MIPS-design\data_memory.v|
-!s90 -reportprogress|300|-work|work|-stats=none|D:\my-projects\MIPS-design\data_memory.v|
+!s107 D:/my-projects/MIPS-design/data_memory.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/my-projects/MIPS-design/data_memory.v|
 !i113 1
 R5
 R6
 vinstruction_memory
-R0
+R7
 !i10b 1
 !s100 ?o:1S0dYCf`6aQEYKgMOT3
 IU2A;a?an5]9WW_1R`OoJa3
@@ -88,9 +88,30 @@ R3
 r1
 !s85 0
 31
-R4
+R8
 !s107 D:/my-projects/MIPS-design/instruction_memory.v|
 !s90 -reportprogress|300|-work|work|-stats=none|D:/my-projects/MIPS-design/instruction_memory.v|
+!i113 1
+R5
+R6
+vinstruction_memory_tb
+R7
+!i10b 1
+!s100 ^8cENIhPa4^JdoMkLg5eP3
+IjDQQ7NAz;F_KlXojk`eK60
+R1
+R2
+w1541252865
+8D:/my-projects/MIPS-design/instruction_memory_tb.v
+FD:/my-projects/MIPS-design/instruction_memory_tb.v
+L0 1
+R3
+r1
+!s85 0
+31
+R8
+!s107 D:/my-projects/MIPS-design/instruction_memory_tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/my-projects/MIPS-design/instruction_memory_tb.v|
 !i113 1
 R5
 R6
