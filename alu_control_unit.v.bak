@@ -4,9 +4,9 @@ module alu_control_unit(ins, ALUOp, ALUctrl);
 	output reg [3:0] ALUctrl;
 	always@ (ins or ALUOp) begin
 	  if (ALUOp == 2'b00) 
-	    ALUctrl <= 4'b0010; // load, store, (add)
+	    ALUctrl <= 4'b0010;
 	  else if (ALUOp == 2'b01) 
-	    ALUctrl <= 4'b0110; // branch equal (subtract)
+	    ALUctrl <= 4'b0110;
 	  else if (ALUOp == 2'b10)
 	    case(ins)
 	       6'b100000 : ALUctrl <= 4'b0010; // AND
@@ -20,3 +20,4 @@ module alu_control_unit(ins, ALUOp, ALUctrl);
 // complete the code
 
 endmodule
+

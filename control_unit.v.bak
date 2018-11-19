@@ -7,8 +7,7 @@ module control_unit(opcode, Jump, EX, MEM, WB);
 	output reg [1:0] WB; 	
 	always@ (opcode) begin
 		if (opcode == 0) begin // R-type instructions
-			EX <= 4'b1100;
-			
+			EX = 4'b1100;
 		end	
 	end
 //complete the code

@@ -210,7 +210,7 @@ module top_mips(
 			IDEX_SE <= w_ID_SE_IDEX; // data extended sign rd + sh + fu
 			IDEX_RT <= w_rt; // register rt
 			IDEX_RD <= w_rd; // register rd <-> destination
-			IDEX_EX <= w_EX;
+			IDEX_EX <= w_EX; // register ex
 			IDEX_MEM <= w_MEM;
 			IDEX_WB <= w_WB;
 		end
