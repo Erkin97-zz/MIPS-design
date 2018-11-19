@@ -20,7 +20,7 @@ module control_unit(opcode, Jump, EX, MEM, WB);
 			*/
 			MEM <= 3'b000;
 			/* about WB:
-			[0] = 1 -> use ALU
+			[0] = 1 -> use ALU Result
 			[1] = 1 -> write to RM
 			*/
 			WB <= 2'b11;
@@ -40,12 +40,29 @@ module control_unit(opcode, Jump, EX, MEM, WB);
 			*/
 			MEM <= 3'b000;
 			/* about WB:
-			[0] = 1 -> use ALU
+			[0] = 1 -> use ALU Result
 			[1] = 1 -> write to RM
 			*/
 			WB <= 2'b11;
 		end
-		else if(opcode == 4'b000001) begin // 2
+		else if(opcode == 4'b000001) begin // load r[rt] = m[r[rs]+SignExtImm]
+			/* about EX:
+			[0] = 0 -> use SignExtImm + r[rs]
+			[2:1] = 2'b00 -> for I-types
+			[3] = 1 - > destination is r[rt], since we don't have r[rd]
+			*/
+			EX <= 4'b1000;
+			/* about MEM:
+			[0] = 0 -> don't write DM
+			[1] = 1 -> read DM
+			[2] = 0 -> pc = pc + 4
+			*/
+			MEM <= 3'b010;
+			/* about WB:
+			[0] = 0 -> use ReadData
+			[1] = 1 -> write to RM
+			*/
+			WB <= 2'b10;
 		end
 	end
 endmodule
