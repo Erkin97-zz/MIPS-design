@@ -20,8 +20,8 @@ module control_unit(opcode, Jump, EX, MEM, WB);
 			*/
 			MEM <= 3'b000;
 			/* about WB:
-			first bit is 1 to use alu result
-			second bit is 1 to register write
+			[0] = 1 -> use ALU
+			[1] = 1 -> write to RM
 			*/
 			WB <= 2'b11;
 		end
@@ -39,9 +39,11 @@ module control_unit(opcode, Jump, EX, MEM, WB);
 			[2] = 0 -> pc = pc + 4
 			*/
 			MEM <= 3'b000;
+			/* about WB:
+			[0] = 1 -> use ALU
+			[1] = 1 -> write to RM
+			*/
+			WB <= 2'b11;
 		end
 	end
-//complete the code
-	
-
 endmodule
