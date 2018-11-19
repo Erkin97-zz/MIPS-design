@@ -12,7 +12,7 @@ module control_unit(opcode, Jump, EX, MEM, WB);
 			[2:1] = 2b'10 -> for R-types
 			[3] = 0 -> destination is r[rd]
 			*/
-			EX <= 4'b1100;
+			EX <= 4'b0101;
 			/* about MEM:
 			[0] = 0 -> don't write DM
 			[1] = 0 -> don't read DM
@@ -32,7 +32,7 @@ module control_unit(opcode, Jump, EX, MEM, WB);
 			[2:1] = 2'b00 -> for I-types
 			[3] = 1 - > destination is r[rt], since we don't have r[rd]
 			*/
-			EX <= 4'b0001;
+			EX <= 4'b1000;
 			/* about MEM:
 			[0] = 0 -> don't write DM
 			[1] = 0 -> don't read DM
