@@ -59,12 +59,12 @@ module tb_top_mips;
     $display("Test ID: #%d\n", DUT.IM.memory[31]);
     for ( i = 0; i < 32; i = i + 1 ) begin
 			// TODO: Replace RF with Register File's instance name
-			$display("R[%02d]: %8x\n", i, DUT.RF.register[i]);
+			$display("R[%02d]: %d\n", i, DUT.RF.register[i]);
     end
 	
 		for ( i = 0; i < 32; i = i + 1 ) begin
 			// TODO: Replace DM with Data Memory's instance name
-			$display("DATA[%02d]: %8x\n", i, DUT.DM.memory[i]);
+			$display("DATA[%02d]: %d\n", i, DUT.DM.memory[i]);
     end
 
 		$stop;

@@ -1,3 +1,6 @@
+/*
+changed print format of debug logs
+*/
 module top_mips(
 		clk, rst, // Input
 		PCaddr, IM_Ins, // IF Stage output

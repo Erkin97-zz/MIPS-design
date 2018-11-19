@@ -9,7 +9,7 @@ module alu_control_unit(ins, ALUOp, ALUctrl);
 	    ALUctrl <= 4'b0110; // branch equal (subtract)
 	  else if (ALUOp == 2'b10)
 	    case(ins)
-	       6'b100000 : ALUctrl <= 4'b0010; // AND
+	       6'b100000 : ALUctrl <= 4'b0010; // ADD
 	       6'b100010 : ALUctrl <= 4'b0110; // SUB
 	       6'b100100 : ALUctrl <= 4'b0000; // AND
 	       6'b100101 : ALUctrl <= 4'b0001; // OR

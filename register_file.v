@@ -1,3 +1,6 @@
+/*
+changed register r0 to 0
+*/
 module register_file(rst, RegWrite, read_reg_1, read_reg_2, write_reg, write_data, out_data_1, out_data_2);
 	input rst, RegWrite;
 	input [4:0] read_reg_1, read_reg_2, write_reg;
@@ -7,7 +10,7 @@ module register_file(rst, RegWrite, read_reg_1, read_reg_2, write_reg, write_dat
 	
 	always@ (*) begin
 		if (!rst) begin
-			register[0] <= 32'd99; register[1] <= 32'd1; register[2] <= 32'd2; register[3] <= 32'd3; register[4] <= 32'd4;
+			register[0] <= 32'd0; register[1] <= 32'd1; register[2] <= 32'd2; register[3] <= 32'd3; register[4] <= 32'd4;
 			register[5] <= 32'd5; register[6] <= 32'd6; register[7] <= 32'd7; register[8] <= 32'd8; register[9] <= 32'd9;
 			register[10] <= 32'd10; register[11] <= 32'd11; register[12] <= 32'd12; register[13] <= 32'd13; register[14] <= 32'd14; 
 			register[15] <= 32'd15; register[16] <= 32'd16; register[17] <= 32'd17; register[18] <= 32'd18; register[19] <= 32'd19; 
