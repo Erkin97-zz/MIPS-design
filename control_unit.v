@@ -8,15 +8,15 @@ module control_unit(opcode, Jump, EX, MEM, WB);
 	always@ (opcode) begin
 		if (opcode == 0) begin // for all R-type instructions
 			/* about EX:
-			first bit is 1 to use register RT for alu commands
-			[2:1] is 2b'10 for alu control center
-			last bit is 1 to use register RD as destination	to write
+			[0] = 1 -> r[rs] (command) r[rt]
+			[2:1] = 2b'10 -> for R-types
+			[3] = 0 -> destination is r[rd]
 			*/
-			EX <= 4'b1101;
+			EX <= 4'b1100;
 			/* about MEM:
-			first bit is 0 to don't write to memory
-			second bit is 0 to don't read from memory
-			third bit is 0 to don't jump anywere, just pc + 4
+			[0] = 0 -> don't write DM
+			[1] = 0 -> don't read DM
+			[2] = 0 -> pc = pc + 4
 			*/
 			MEM <= 3'b000;
 			/* about WB:
@@ -24,7 +24,22 @@ module control_unit(opcode, Jump, EX, MEM, WB);
 			second bit is 1 to register write
 			*/
 			WB <= 2'b11;
-		end	
+		end
+		else if (opcode == 4'b001000) begin // addi r[rt] = r[rs] + SignExtImm
+		// todo implement
+			/* about EX:
+			[0] = 0 -> use SignExtImm + r[rs]
+			[2:1] = 2'b00 -> for I-types
+			[3] = 1 - > destination is r[rt], since we don't have r[rd]
+			*/
+			EX <= 4'b0001;
+			/* about MEM:
+			[0] = 0 -> don't write DM
+			[1] = 0 -> don't read DM
+			[2] = 0 -> pc = pc + 4
+			*/
+			MEM <= 3'b000;
+		end
 	end
 //complete the code
 	
