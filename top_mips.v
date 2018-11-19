@@ -74,13 +74,13 @@ module top_mips(
 
 	initial begin
 		$monitor(
-			"[IF/ID  STAGE]PC: %d ", IFID_PC,
+			"[IF/ID  STAGE]PC: %d ", IFID_PC>>2,
 			"INS: %b\n", IFID_Ins,
 			"DECODED INS: w_op: %b, w_rs: %d, w_rt: %d, w_rd: %d, w_sh: %b, w_fu: %b\n", w_op, w_rs, w_rt, w_rd, w_sh, w_fu,
 			"[ID/EX  STAGE]PC: %d ", IDEX_PC,
 			"D1: %d ", IDEX_D1,
 			"D2: %d ", IDEX_D2,
-			"SE: %b ", IDEX_SE,
+			"SE: %d ", IDEX_SE,
 			"RT: %d ", IDEX_RT,
 			"RD: %d ", IDEX_RD,
 			"EX: %b ", IDEX_EX,

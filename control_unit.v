@@ -4,7 +4,7 @@ module control_unit(opcode, Jump, EX, MEM, WB);
 	output reg Jump;
 	output reg [3:0] EX; 
 	output reg [2:0] MEM; 
-	output reg [1:0] WB; 	
+	output reg [1:0] WB;
 	always@ (opcode) begin
 		if (opcode == 0) begin // for all R-type instructions
 			/* about EX:
@@ -44,6 +44,8 @@ module control_unit(opcode, Jump, EX, MEM, WB);
 			[1] = 1 -> write to RM
 			*/
 			WB <= 2'b11;
+		end
+		else if(opcode == 4'b000001) begin // 2
 		end
 	end
 endmodule
