@@ -86,9 +86,9 @@ module control_unit(opcode, Jump, EX, MEM, WB);
 			*/
 			WB <= 2'b00;
 		end
-		else if (opcode == 4'b000010) begin // j pc = 26 bit adress
+		else if (opcode == 6'b000010) begin // j pc += (SignExtImm << 2)
 			EX <= 0;
-			MEM <= 0;
+			MEM <= 3'b100; // use pc = pc + (SignExtImm << 2)
 			WB <= 0;
 		end
 	end
