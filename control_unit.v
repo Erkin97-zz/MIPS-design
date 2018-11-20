@@ -28,7 +28,7 @@ module control_unit(opcode, Jump, EX, MEM, WB);
 			*/
 			WB <= 2'b11;
 		end
-		else if (opcode == 4'b001000) begin // addi r[rt] = r[rs] + SignExtImm
+		else if (opcode == 6'b001000) begin // addi r[rt] = r[rs] + SignExtImm
 		// todo implement
 			/* about EX:
 			[0] = 0 -> use SignExtImm + r[rs]
@@ -48,7 +48,7 @@ module control_unit(opcode, Jump, EX, MEM, WB);
 			*/
 			WB <= 2'b11;
 		end
-		else if(opcode == 4'b100011) begin // load r[rt] = m[r[rs]+SignExtImm]
+		else if(opcode == 6'b100011) begin // load r[rt] = m[r[rs]+SignExtImm]
 			/* about EX:
 			[0] = 0 -> use SignExtImm + r[rs]
 			[2:1] = 2'b00 -> for I-types
@@ -67,7 +67,7 @@ module control_unit(opcode, Jump, EX, MEM, WB);
 			*/
 			WB <= 2'b10;
 		end
-		else if(opcode == 4'b101011) begin // store m[r[rs]+SignExtImm] = r[rt] 
+		else if(opcode == 6'b101011) begin // store m[r[rs]+SignExtImm] = r[rt] 
 			/* about EX:
 			[0] = 0 -> use SignExtImm + r[rs]
 			[2:1] = 2'b00 -> for I-types

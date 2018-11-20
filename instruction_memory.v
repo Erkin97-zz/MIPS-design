@@ -7,23 +7,6 @@ module instruction_memory(rst, addr, ins);
 	input [31:0] addr;
 	output [31:0] ins;
 	reg [31:0] memory[31:0];
-	
-	// OP
-	// 000000 R-Type
-	// 000001 lw
-	// 000010 sw
-	// 000011 beq
-	// 000100 Jump
-	// 001000 addi
-	// 001001 subi
-	
-	// FU (R-Type)
-	// 000000 AND
-	// 000001 OR
-	// 000010 ADD
-	// 000110 SUB
-	// 000111 set on less then
-	// 001100 NOR
 		
 	always@ (negedge rst) begin
 		if (!rst) begin
