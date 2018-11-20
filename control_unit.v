@@ -82,9 +82,9 @@ module control_unit(opcode, Jump, EX, MEM, WB);
 			MEM <= 3'b001;
 			/* about WB:
 			[0] = 0 -> use ReadData
-			[1] = 1 -> write to RM
+			[1] = 0 -> don't write to RM
 			*/
-			WB <= 2'b10;
+			WB <= 2'b00;
 		end
 		else if (opcode == 4'b000010) begin // j pc = 26 bit adress
 			EX <= 0;
